@@ -142,6 +142,15 @@ describe LinkedIn::Api do
     end
   end
 
+  context "Company Pages API" do
+    use_vcr_cassette
+
+    it "should be able to view companies with admin permissions" do
+      data = client.company(:is_company_admin => true)
+      data.should be_an_instance_of(LinkedIn::Mash)
+    end
+  end
+
   context "Job API" do
     use_vcr_cassette
 

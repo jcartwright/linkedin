@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.linkedin.com/v1/companies?is-company-admin=true
+    body:
+      encoding: US-ASCII
+      string: ""
+    headers:
+      X-Li-Format:
+      - json
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.4.7
+      Authorization:
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="KBPLf7xeyytzfsu34nJgoYesk492qiCWeGfzHuSME", oauth_signature="S14stGDl%2BN0DUf8VZE4ps6BT%2Fyk%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379194567", oauth_token="2b744f96-a58f-46e8-8e52-960cd9bda39c", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      X-Li-Request-Id:
+      - VXSB61VU3K
+      Vary:
+      - "*"
+      X-Li-Format:
+      - json
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Sat, 14 Sep 2013 21:36:07 GMT
+      X-Li-Fabric:
+      - PROD-ELA4
+      Age:
+      - "1"
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Li-Pop:
+      - PROD-ELA4
+      X-Li-Uuid:
+      - WEJBByfiIxNQqcmYsSoAAA==
+    body:
+      encoding: US-ASCII
+      string: |-
+        {
+          "_total": 6,
+          "values": [
+            {
+              "id": 2243124,
+              "name": "NeuroSpine Institue Foundation, Inc."
+            },
+            {
+              "id": 1017875,
+              "name": "Enspired Software"
+            },
+            {
+              "id": 1103497,
+              "name": "Foreclosure Defense and Solutions"
+            },
+            {
+              "id": 3277386,
+              "name": "Ensight Enterprises, LLC"
+            },
+            {
+              "id": 2209594,
+              "name": "Marketing Ensight"
+            },
+            {
+              "id": 219204,
+              "name": "CogWise Software LLC"
+            }
+          ]
+        }
+    http_version:
+  recorded_at: Sat, 14 Sep 2013 21:36:08 GMT
+recorded_with: VCR 2.5.0
