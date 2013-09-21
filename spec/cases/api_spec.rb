@@ -4,11 +4,27 @@ describe LinkedIn::Api do
   before do
     LinkedIn.default_profile_fields = nil
     client.stub(:consumer).and_return(consumer)
-    client.authorize_from_access('atoken', 'asecret')
+    # client.authorize_from_access('atoken', 'asecret')
   end
 
-  let(:client){LinkedIn::Client.new('token', 'secret')}
-  let(:consumer){OAuth::Consumer.new('token', 'secret', {:site => 'https://api.linkedin.com'})}
+  # let(:client){LinkedIn::Client.new('token', 'secret')}
+  let(:client) do
+    consumer_token  = ENV['LINKED_IN_CONSUMER_KEY'] || 'token'
+    consumer_secret = ENV['LINKED_IN_CONSUMER_SECRET'] || 'secret'
+    client = LinkedIn::Client.new(consumer_token, consumer_secret)
+
+    auth_token      = ENV['LINKED_IN_AUTH_KEY'] || 'token'
+    auth_secret     = ENV['LINKED_IN_AUTH_SECRET'] || 'secret'
+    client.authorize_from_access(auth_token, auth_secret)
+    client
+  end
+
+  let(:consumer) do
+    consumer_token  = ENV['LINKED_IN_CONSUMER_KEY'] || 'token'
+    consumer_secret = ENV['LINKED_IN_CONSUMER_SECRET'] || 'secret'
+
+    OAuth::Consumer.new(consumer_token, consumer_secret, {:site => 'https://api.linkedin.com'})
+  end
 
   it "should be able to view the account profile" do
     stub_request(:get, "https://api.linkedin.com/v1/people/~").to_return(:body => "{}")
@@ -143,12 +159,35 @@ describe LinkedIn::Api do
   end
 
   context "Company Pages API" do
-    use_vcr_cassette
+    use_vcr_cassette :record => :new_episodes
+    let(:company_id) { 3277386 }
+    let(:foreign_company_id) { 162479 }
 
     it "should be able to view companies with admin permissions" do
       data = client.company(:is_company_admin => true)
       data.should be_an_instance_of(LinkedIn::Mash)
     end
+
+    it "should be able to share a new status" do
+      response = client.add_share({:comment => "Company Page Testing...1, 2, 3"}, :companies, company_id)
+      response.code.should == "201"
+    end
+
+    it "should determine if a company has shares enabled" do
+      response = client.is_company_share_enabled?(company_id)
+      response.should be_true
+    end
+
+    it "should return true if the current viewer is an administrator for a company" do
+      response = client.is_company_admin?(company_id)
+      response.should be_true
+    end
+
+    it "should return false if the current viewer is not an administrator for a company" do
+      response = client.is_company_admin?(foreign_company_id)
+      response.should be_false
+    end
+
   end
 
   context "Job API" do

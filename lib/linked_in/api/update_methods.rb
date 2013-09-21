@@ -3,8 +3,9 @@ module LinkedIn
 
     module UpdateMethods
 
-      def add_share(share)
-        path = "/people/~/shares"
+      def add_share(share, type='people', id='~')
+        path = "/#{type}/#{id}/shares"
+
         defaults = {:visibility => {:code => "anyone"}}
         post(path, defaults.merge(share).to_json, "Content-Type" => "application/json")
       end
@@ -51,13 +52,13 @@ module LinkedIn
 
       def send_message(subject, body, recipient_paths)
         path = "/people/~/mailbox"
-      
+
         message = {
-            'subject' => subject, 
+            'subject' => subject,
             'body' => body,
             'recipients' => {
-                'values' => recipient_paths.map do |profile_path| 
-                  { 'person' => { '_path' => "/people/#{profile_path}" } } 
+                'values' => recipient_paths.map do |profile_path|
+                  { 'person' => { '_path' => "/people/#{profile_path}" } }
                 end
             }
         }

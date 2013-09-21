@@ -3,7 +3,7 @@ module LinkedIn
   module Search
     def search(options={}, type='people')
 
-      path = "/#{type.to_s}-search"
+      path = "/#{type}-search"
 
       if options.is_a?(Hash)
         fields = options.delete(:fields)

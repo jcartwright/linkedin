@@ -58,6 +58,16 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def is_company_share_enabled?(company_id, options={})
+        path = "#{company_path(options).gsub("~", company_id.to_s)}/relation-to-viewer/is-company-share-enabled"
+        boolean_query(path, options)
+      end
+
+      def is_company_admin?(company_id, options={})
+        path = "#{company_path(options).gsub("~", company_id.to_s)}/relation-to-viewer/is-company-share-enabled"
+        boolean_query(path, options)
+      end
+
       private
 
         def simple_query(path, options={})
@@ -74,6 +84,11 @@ module LinkedIn
           path   += "?#{params}" if !params.empty?
 
           Mash.from_json(get(path, headers))
+        end
+
+        def boolean_query(path, options={})
+          response = get(path, options).to_s.downcase
+          response == "true"
         end
 
         def person_path(options)

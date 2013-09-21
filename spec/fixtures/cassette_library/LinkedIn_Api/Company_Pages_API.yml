@@ -1,50 +1,50 @@
----
-http_interactions:
-- request:
+--- 
+http_interactions: 
+- request: 
     method: get
     uri: https://api.linkedin.com/v1/companies?is-company-admin=true
-    body:
+    body: 
       encoding: US-ASCII
       string: ""
-    headers:
-      X-Li-Format:
+    headers: 
+      X-Li-Format: 
       - json
-      Accept:
+      Accept: 
       - "*/*"
-      User-Agent:
+      User-Agent: 
       - OAuth gem v0.4.7
-      Authorization:
-      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="KBPLf7xeyytzfsu34nJgoYesk492qiCWeGfzHuSME", oauth_signature="S14stGDl%2BN0DUf8VZE4ps6BT%2Fyk%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379194567", oauth_token="2b744f96-a58f-46e8-8e52-960cd9bda39c", oauth_version="1.0"
-  response:
-    status:
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="nlFtuo25fVZRSb4YYukNzBJVQvnnX8LfUPVsMsAN4k", oauth_signature="cpkaFMeM66Lywpn46Mhr%2F1YCq5g%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379717670", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      Server:
+    headers: 
+      Server: 
       - Apache-Coyote/1.1
-      X-Li-Request-Id:
-      - VXSB61VU3K
-      Vary:
+      X-Li-Request-Id: 
+      - W3K15WG6MZ
+      Vary: 
       - "*"
-      X-Li-Format:
+      X-Li-Format: 
       - json
-      Content-Type:
+      Content-Type: 
       - application/json;charset=UTF-8
-      Date:
-      - Sat, 14 Sep 2013 21:36:07 GMT
-      X-Li-Fabric:
+      Date: 
+      - Fri, 20 Sep 2013 22:54:30 GMT
+      X-Li-Fabric: 
       - PROD-ELA4
-      Age:
-      - "1"
-      Transfer-Encoding:
+      Age: 
+      - "0"
+      Transfer-Encoding: 
       - chunked
-      Connection:
+      Connection: 
       - keep-alive
-      X-Li-Pop:
+      X-Li-Pop: 
       - PROD-ELA4
-      X-Li-Uuid:
-      - WEJBByfiIxNQqcmYsSoAAA==
-    body:
+      X-Li-Uuid: 
+      - cAcTWem9JRNwTYjgKysAAA==
+    body: 
       encoding: US-ASCII
       string: |-
         {
@@ -76,6 +76,163 @@ http_interactions:
             }
           ]
         }
-    http_version:
-  recorded_at: Sat, 14 Sep 2013 21:36:08 GMT
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 22:54:30 GMT
+- request: 
+    method: post
+    uri: https://api.linkedin.com/v1/companies/3277386/shares
+    body: 
+      encoding: UTF-8
+      string: "{\"visibility\":{\"code\":\"anyone\"},\"comment\":\"Company Page Testing...1, 2, 3\"}"
+    headers: 
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Content-Length: 
+      - "75"
+      Authorization: 
+      - OAuth oauth_body_hash="clGxr%2BBGKh8Q5%2BVxhxBVCMtprmw%3D", oauth_consumer_key="lo3q1nktmcks", oauth_nonce="HrwMAiRPUqLVbcONB73favAo4UYJBAgtUXRzCnZPRY", oauth_signature="2T6DQf8C8th4VyUYGfFdW5x0%2FXQ%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379717670", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
+      code: 201
+      message: Created
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Li-Request-Id: 
+      - 74POXQOE7F
+      Location: 
+      - http://api.linkedin.com/v1/companies/3277386/shares/s5786955598482374656
+      Vary: 
+      - "*"
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Date: 
+      - Fri, 20 Sep 2013 22:54:30 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "1"
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - CLM4aOm9JRPwdyQaMSsAAA==
+    body: 
+      encoding: US-ASCII
+      string: |-
+        {
+          "updateKey": "UNIU-c3277386-5786955346807357440-SHARE",
+          "updateUrl": "http://www.linkedin.com/company/3277386/comments?topic=5786955346807357440&type=U&scope=3277386&stype=C&a=ThhC"
+        }
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 22:54:31 GMT
+- request: 
+    method: get
+    uri: https://api.linkedin.com/v1/companies/3277386/relation-to-viewer/is-company-share-enabled
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      X-Li-Format: 
+      - json
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="1dWtSoKIeWIytggwJrPzpYZCzgx2m1CFgwBOTijs", oauth_signature="wu7Buaq92%2B4tjmmBRS5xF1wzGOY%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379717671", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Li-Request-Id: 
+      - 5UR9JCH12N
+      Vary: 
+      - "*"
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Date: 
+      - Fri, 20 Sep 2013 22:54:30 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "1"
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - OI7Ziem9JROQYgRWACsAAA==
+    body: 
+      encoding: US-ASCII
+      string: "true"
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 22:54:31 GMT
+- request: 
+    method: get
+    uri: https://api.linkedin.com/v1/companies/162479/relation-to-viewer/is-company-share-enabled
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      X-Li-Format: 
+      - json
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="YbZaVY7xAcbzXdAWpTjcXx3AqtDMZXt4Yvj9z5EtkI", oauth_signature="zhlTmNkm7U2rGwGEa6fPiLMP3Lo%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379717671", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Li-Request-Id: 
+      - 6GX4OOBMBF
+      Vary: 
+      - "*"
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Date: 
+      - Fri, 20 Sep 2013 22:54:31 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "0"
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - IF/Ml+m9JRPQl5oe9yoAAA==
+    body: 
+      encoding: US-ASCII
+      string: "false"
+    http_version: 
+  recorded_at: Fri, 20 Sep 2013 22:54:31 GMT
 recorded_with: VCR 2.5.0
