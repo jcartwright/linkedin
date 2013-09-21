@@ -1,81 +1,125 @@
----
-http_interactions:
-- request:
+--- 
+http_interactions: 
+- request: 
     method: get
     uri: https://api.linkedin.com/v1/companies/id=1586
-    body:
+    body: 
       encoding: US-ASCII
-      string: ''
-    headers:
-      X-Li-Format:
+      string: ""
+    headers: 
+      X-Li-Format: 
       - json
-      User-Agent:
-      - OAuth gem v0.4.5
-      Authorization:
-      - OAuth oauth_consumer_key="consumer_key", oauth_nonce="nonce", oauth_signature="signature",
-        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1319129843", oauth_token="token",
-        oauth_version="1.0"
-  response:
-    status:
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="IJBXincCoLmQM12hPvbXLxLkhRgPpE8qweexS6KyjGs", oauth_signature="FnoefDc8L5y4RY45uQXahN7IzE0%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379722951", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      Server:
+    headers: 
+      Server: 
       - Apache-Coyote/1.1
-      Vary:
-      - ! '*'
-      X-Li-Format:
+      X-Li-Request-Id: 
+      - RL55108N3T
+      Vary: 
+      - "*"
+      X-Li-Format: 
       - json
-      Content-Type:
+      Content-Type: 
       - application/json;charset=UTF-8
-      Transfer-Encoding:
+      Date: 
+      - Sat, 21 Sep 2013 00:22:31 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "1"
+      Transfer-Encoding: 
       - chunked
-      Date:
-      - Thu, 20 Oct 2011 16:57:24 GMT
-    body:
-      encoding: UTF-8
-      string: ! "{\n  \"id\": 1586,\n  \"name\": \"Amazon\"\n}"
-    http_version: '1.1'
-  recorded_at: Wed, 10 Apr 2013 22:06:51 GMT
-- request:
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - iBg0BbfCJRPwJsntXCsAAA==
+    body: 
+      encoding: US-ASCII
+      string: |-
+        {
+          "id": 1586,
+          "name": "Amazon"
+        }
+    http_version: 
+  recorded_at: Sat, 21 Sep 2013 00:22:32 GMT
+- request: 
     method: get
     uri: https://api.linkedin.com/v1/companies/id=1586:(id,name,industry,locations:(address:(city,state,country-code),is-headquarters),employee-count-range)
-    body:
+    body: 
       encoding: US-ASCII
-      string: ''
-    headers:
-      X-Li-Format:
+      string: ""
+    headers: 
+      X-Li-Format: 
       - json
-      User-Agent:
-      - OAuth gem v0.4.5
-      Authorization:
-      - OAuth oauth_consumer_key="consumer_key", oauth_nonce="nonc", oauth_signature="signature",
-        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1319129844", oauth_token="token",
-        oauth_version="1.0"
-  response:
-    status:
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="Yr7oXvI7yrY0SlnovAkXYLxiYAm3TBHilR5KPk", oauth_signature="0gZ5ai41NnW70NDvLTu5I128cOY%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379722952", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
       code: 200
       message: OK
-    headers:
-      Server:
+    headers: 
+      Server: 
       - Apache-Coyote/1.1
-      Vary:
-      - ! '*'
-      X-Li-Format:
+      X-Li-Request-Id: 
+      - SS5RRHEJHO
+      Vary: 
+      - "*"
+      X-Li-Format: 
       - json
-      Content-Type:
+      Content-Type: 
       - application/json;charset=UTF-8
-      Transfer-Encoding:
+      Date: 
+      - Sat, 21 Sep 2013 00:22:32 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "0"
+      Transfer-Encoding: 
       - chunked
-      Date:
-      - Thu, 20 Oct 2011 16:57:24 GMT
-    body:
-      encoding: UTF-8
-      string: ! "{\n  \"employeeCountRange\": {\n    \"code\": \"I\",\n    \"name\":
-        \"10001+\"\n },\n  \"id\": 1586,\n  \"industry\": \"Internet\",\n  \"locations\":
-        {\n    \"_total\": 1,\n    \"values\": [{\n      \"address\": {\n        \"city\":
-        \"Seattle\",\n \"countryCode\": \"us\",\n        \"state\": \"WA\"\n      },\n
-        \     \"isHeadquarters\": true\n    }]\n  },\n  \"name\": \"Amazon\"\n}"
-    http_version: '1.1'
-  recorded_at: Wed, 10 Apr 2013 22:06:51 GMT
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - wPbrE7fCJRNw36e/6yoAAA==
+    body: 
+      encoding: US-ASCII
+      string: |-
+        {
+          "employeeCountRange": {
+            "code": "I",
+            "name": "10001+"
+          },
+          "id": 1586,
+          "industry": "Internet",
+          "locations": {
+            "_total": 1,
+            "values": [{
+              "address": {
+                "city": "Seattle",
+                "countryCode": "us",
+                "state": "WA"
+              },
+              "isHeadquarters": true
+            }]
+          },
+          "name": "Amazon"
+        }
+    http_version: 
+  recorded_at: Sat, 21 Sep 2013 00:22:32 GMT
 recorded_with: VCR 2.5.0
