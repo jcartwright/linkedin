@@ -70,10 +70,10 @@ describe LinkedIn::Search do
 
       it "should perform a search" do
         results.companies.all.size.should == 5
-        results.companies.all.first.name.should == 'iSquare - Apple Authorized Distributor in Greece & Cyprus'
+        results.companies.all.first.name.should == 'iSquare SA - Apple Authorised Distributor for Greece & Cyprus'
         results.companies.all.first.id.should == 2135525
-        results.companies.all.last.name.should == 'Apple Crumble'
-        results.companies.all.last.id.should == 1049054
+        results.companies.all.last.name.should == 'iHouse - Apple Authorized Reseller'
+        results.companies.all.last.id.should == 3179177
       end
     end
 
@@ -104,10 +104,10 @@ describe LinkedIn::Search do
       end
 
       it "should perform a search" do
-        results.people.all.size.should == 6
-        results.people.all.first.first_name.should == 'Shay'
-        results.people.all.first.last_name.should == 'Frendt'
-        results.people.all.first.id.should == 'ucXjUw4M9J'
+        results.people.all.size.should == 10
+        results.people.all.first.first_name.should == 'Jeremy'
+        results.people.all.first.last_name.should == 'McAnally'
+        results.people.all.first.id.should == 'qUs96Ofu0S'
       end
     end
 
@@ -119,10 +119,10 @@ describe LinkedIn::Search do
       end
 
       it "should perform a search" do
-        results.people.all.size.should == 6
-        results.people.all.first.first_name.should == 'Shay'
-        results.people.all.first.last_name.should == 'Frendt'
-        results.people.all.first.id.should == 'ucXjUw4M9J'
+        results.people.all.size.should == 10
+        results.people.all.first.first_name.should == 'Jeremy'
+        results.people.all.first.last_name.should == 'McAnally'
+        results.people.all.first.id.should == 'qUs96Ofu0S'
       end
     end
 
@@ -134,10 +134,10 @@ describe LinkedIn::Search do
       end
 
       it "should perform a search" do
-        results.people.all.size.should == 1
-        results.people.all.first.first_name.should == 'Satish'
-        results.people.all.first.last_name.should == 'Talim'
-        results.people.all.first.id.should == 'V1FPuGot-I'
+        results.people.all.size.should == 5
+        results.people.all.first.first_name.should == 'Matthew'
+        results.people.all.first.last_name.should == 'McCullough'
+        results.people.all.first.id.should == '_nwnlIfu8z'
       end
     end
 
@@ -150,9 +150,9 @@ describe LinkedIn::Search do
 
       it "should perform a search" do
         results.people.all.size.should == 10
-        results.people.all.first.first_name.should == 'Charles'
-        results.people.all.first.last_name.should == 'Garcia, CFA'
-        results.people.all.first.id.should == '2zk34r8TvA'
+        results.people.all.first.first_name.should == 'Charles P.'
+        results.people.all.first.last_name.should == 'Garcia'
+        results.people.all.first.id.should == '29NUaI_I-9'
       end
     end
 
@@ -167,11 +167,11 @@ describe LinkedIn::Search do
       it "should perform a search" do
         first_person = results.people.all.first
         results.people.all.size.should == 10
-        first_person.first_name.should == 'Charles'
-        first_person.last_name.should == 'Garcia, CFA'
-        first_person.id.should == '2zk34r8TvA'
-        first_person.picture_url.should be_nil
-        first_person.public_profile_url.should == 'http://www.linkedin.com/in/charlesgarcia'
+        first_person.first_name.should == 'Charles P.'
+        first_person.last_name.should == 'Garcia'
+        first_person.id.should == '29NUaI_I-9'
+        first_person.picture_url.should == 'http://m.c.lnkd.licdn.com/mpr/mprx/0_u_fFG4ExLxBon7rsGXp4GseYLJGE9WTsmFRZGse7Vx9sdDnVh50IuVpTIqCvvm8nS8DJDj9JZqhM'
+        first_person.public_profile_url.should == 'http://www.linkedin.com/in/charlespgarcia'
       end
     end
 
@@ -183,10 +183,10 @@ describe LinkedIn::Search do
       end
 
       it "should perform a search" do
-        results.people.all.size.should == 6
-        results.people.all.first.first_name.should == 'Ryan'
-        results.people.all.first.last_name.should == 'Sue'
-        results.people.all.first.id.should == 'KHkgwBMaa-'
+        results.people.all.size.should == 10
+        results.people.all.first.first_name.should == 'Harshdeep'
+        results.people.all.first.last_name.should == 'Singh'
+        results.people.all.first.id.should == 'DesU-6nvpA'
       end
     end
 
