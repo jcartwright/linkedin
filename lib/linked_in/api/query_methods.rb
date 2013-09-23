@@ -19,7 +19,7 @@ module LinkedIn
       end
 
       def company(options = {})
-        path   = company_path(options)
+        path   = companies_path(options)
         simple_query(path, options)
       end
 
@@ -59,17 +59,17 @@ module LinkedIn
       end
 
       def is_company_share_enabled?(company_id, options={})
-        path = "#{company_path(options).gsub("~", company_id.to_s)}/relation-to-viewer/is-company-share-enabled"
+        path = "#{company_pages_path(options.merge(:company_id => company_id))}/relation-to-viewer/is-company-share-enabled"
         boolean_query(path, options)
       end
 
       def is_company_admin?(company_id, options={})
-        path = "#{company_path(options).gsub("~", company_id.to_s)}/relation-to-viewer/is-company-share-enabled"
+        path = "#{company_pages_path(options.merge(:company_id => company_id))}/relation-to-viewer/is-company-share-enabled"
         boolean_query(path, options)
       end
 
       def company_statistics(company_id, options={})
-        path = "#{company_path(options).gsub("~", company_id.to_s)}/company-statistics"
+        path = "#{company_pages_path(options.merge(:company_id => company_id))}/company-statistics"
         simple_query(path, options)
       end
 
@@ -94,44 +94,6 @@ module LinkedIn
         def boolean_query(path, options={})
           response = get(path, options).to_s.downcase
           response == "true"
-        end
-
-        def person_path(options)
-          path = "/people/"
-          if id = options.delete(:id)
-            path += "id=#{id}"
-          elsif url = options.delete(:url)
-            path += "url=#{CGI.escape(url)}"
-          else
-            path += "~"
-          end
-        end
-
-        def company_path(options)
-          path = "/companies"
-
-          if domain = options.delete(:domain)
-            path += "?email-domain=#{CGI.escape(domain)}"
-          elsif id = options.delete(:id)
-            path += "/id=#{id}"
-          elsif url = options.delete(:url)
-            path += "/url=#{CGI.escape(url)}"
-          elsif name = options.delete(:name)
-            path += "/universal-name=#{CGI.escape(name)}"
-          elsif admin = options.delete(:is_company_admin)
-            path += "?is-company-admin=true"
-          else
-            path += "/~"
-          end
-        end
-
-        def jobs_path(options)
-          path = "/jobs"
-          if id = options.delete(:id)
-            path += "/id=#{id}"
-          else
-            path += "/~"
-          end
         end
 
     end
