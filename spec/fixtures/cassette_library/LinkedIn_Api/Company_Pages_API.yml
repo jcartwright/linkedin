@@ -235,4 +235,1020 @@ http_interactions:
       string: "false"
     http_version: 
   recorded_at: Fri, 20 Sep 2013 22:54:31 GMT
+- request: 
+    method: get
+    uri: https://api.linkedin.com/v1/companies/3277386/company-statistics
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      X-Li-Format: 
+      - json
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="0zJRIEaEyFoGOc19xYNs1MbR22tjhyS8aD3Ewsdzi0", oauth_signature="dDKn8WspSRf8iDs%2F4liT1Gkzzr8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1379972976", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Li-Request-Id: 
+      - C38MIBZKLL
+      Vary: 
+      - "*"
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Date: 
+      - Mon, 23 Sep 2013 21:49:36 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "0"
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - 6FUMbhymJhMQmH7vXCsAAA==
+    body: 
+      encoding: US-ASCII
+      string: |-
+        {
+          "followStatistics": {
+            "companySizes": {
+              "_total": 9,
+              "values": [
+                {
+                  "entryKey": "B",
+                  "entryValue": "1"
+                },
+                {
+                  "entryKey": "A",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "C",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "D",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "E",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "F",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "G",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "H",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "I",
+                  "entryValue": "0"
+                }
+              ]
+            },
+            "count": 1,
+            "countries": {
+              "_total": 1,
+              "values": [{
+                "entryKey": "us",
+                "entryValue": "1"
+              }]
+            },
+            "countsByMonth": {
+              "_total": 12,
+              "values": [
+                {
+                  "date": {
+                    "month": 8,
+                    "year": 2013
+                  },
+                  "newCount": 1,
+                  "totalCount": 1
+                },
+                {
+                  "date": {
+                    "month": 7,
+                    "year": 2013
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 6,
+                    "year": 2013
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 5,
+                    "year": 2013
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 4,
+                    "year": 2013
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 3,
+                    "year": 2013
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 2,
+                    "year": 2013
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 1,
+                    "year": 2013
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 12,
+                    "year": 2012
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 11,
+                    "year": 2012
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {
+                  "date": {
+                    "month": 10,
+                    "year": 2012
+                  },
+                  "newCount": 0,
+                  "totalCount": 0
+                },
+                {"date": {
+                  "month": 9,
+                  "year": 2012
+                }}
+              ]
+            },
+            "employeeCount": 1,
+            "functions": {
+              "_total": 27,
+              "values": [
+                {
+                  "entryKey": "9",
+                  "entryValue": "1"
+                },
+                {
+                  "entryKey": "0",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "1",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "2",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "3",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "4",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "5",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "6",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "7",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "8",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "10",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "11",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "12",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "13",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "14",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "15",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "16",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "17",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "18",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "19",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "20",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "21",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "22",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "23",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "24",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "25",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "26",
+                  "entryValue": "0"
+                }
+              ]
+            },
+            "industries": {
+              "_total": 147,
+              "values": [
+                {
+                  "entryKey": "4",
+                  "entryValue": "1"
+                },
+                {
+                  "entryKey": "1",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "3",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "5",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "6",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "7",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "8",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "9",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "10",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "11",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "12",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "13",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "14",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "15",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "16",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "17",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "18",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "19",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "20",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "21",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "22",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "23",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "24",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "25",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "26",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "27",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "28",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "29",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "30",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "31",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "32",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "33",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "34",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "35",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "36",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "37",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "38",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "39",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "40",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "41",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "42",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "43",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "44",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "45",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "46",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "47",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "48",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "49",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "50",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "51",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "52",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "53",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "54",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "55",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "56",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "57",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "58",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "59",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "60",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "61",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "62",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "63",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "64",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "65",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "66",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "67",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "68",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "69",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "70",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "71",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "72",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "73",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "74",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "75",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "76",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "77",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "78",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "79",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "80",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "81",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "82",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "83",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "84",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "85",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "86",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "87",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "88",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "89",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "90",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "91",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "92",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "93",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "94",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "95",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "96",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "97",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "98",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "99",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "100",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "101",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "102",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "103",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "104",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "105",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "106",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "107",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "108",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "109",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "110",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "111",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "112",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "113",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "114",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "115",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "116",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "117",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "118",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "119",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "120",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "121",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "122",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "123",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "124",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "125",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "126",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "127",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "128",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "129",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "130",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "131",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "132",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "133",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "134",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "135",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "136",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "137",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "138",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "139",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "140",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "141",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "142",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "143",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "144",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "145",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "146",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "147",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "148",
+                  "entryValue": "0"
+                }
+              ]
+            },
+            "nonEmployeeCount": 0,
+            "regions": {
+              "_total": 1,
+              "values": [{
+                "entryKey": "us-31",
+                "entryValue": "1"
+              }]
+            },
+            "seniorities": {
+              "_total": 11,
+              "values": [
+                {
+                  "entryKey": "10",
+                  "entryValue": "1"
+                },
+                {
+                  "entryKey": "0",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "1",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "2",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "3",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "4",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "5",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "6",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "7",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "8",
+                  "entryValue": "0"
+                },
+                {
+                  "entryKey": "9",
+                  "entryValue": "0"
+                }
+              ]
+            }
+          },
+          "statusUpdateStatistics": {"viewsByMonth": {
+            "_total": 12,
+            "values": [
+              {"date": {
+                "month": 8,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 7,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 6,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 5,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 4,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 3,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 2,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 1,
+                "year": 2013
+              }},
+              {"date": {
+                "month": 12,
+                "year": 2012
+              }},
+              {"date": {
+                "month": 11,
+                "year": 2012
+              }},
+              {"date": {
+                "month": 10,
+                "year": 2012
+              }},
+              {"date": {
+                "month": 9,
+                "year": 2012
+              }}
+            ]
+          }}
+        }
+    http_version: 
+  recorded_at: Mon, 23 Sep 2013 21:49:37 GMT
 recorded_with: VCR 2.5.0

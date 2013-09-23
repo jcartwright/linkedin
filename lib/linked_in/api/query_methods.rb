@@ -68,6 +68,11 @@ module LinkedIn
         boolean_query(path, options)
       end
 
+      def company_statistics(company_id, options={})
+        path = "#{company_path(options).gsub("~", company_id.to_s)}/company-statistics"
+        simple_query(path, options)
+      end
+
       private
 
         def simple_query(path, options={})

@@ -163,31 +163,41 @@ describe LinkedIn::Api do
     let(:company_id) { 3277386 }
     let(:foreign_company_id) { 162479 }
 
-    it "should be able to view companies with admin permissions" do
-      data = client.company(:is_company_admin => true)
-      data.should be_an_instance_of(LinkedIn::Mash)
+    context "as an admin" do
+      it "should be able to view companies with admin permissions" do
+        data = client.company(:is_company_admin => true)
+        data.should be_an_instance_of(LinkedIn::Mash)
+      end
+
+      it "should be able to share a new status" do
+        response = client.add_share({:comment => "Company Page Testing...1, 2, 3"}, :companies, company_id)
+        response.code.should == "201"
+      end
+
+      it "should determine if a company has shares enabled" do
+        response = client.is_company_share_enabled?(company_id)
+        response.should be_true
+      end
+
+      it "should return true if the current viewer is an administrator for a company" do
+        response = client.is_company_admin?(company_id)
+        response.should be_true
+      end
+
+      it "should return statistics for a particular company page" do
+        response = client.company_statistics(company_id)
+        response.should be_an_instance_of(LinkedIn::Mash)
+        response.follow_statistics.should_not be_nil
+        response.status_update_statistics.should_not be_nil
+      end
     end
 
-    it "should be able to share a new status" do
-      response = client.add_share({:comment => "Company Page Testing...1, 2, 3"}, :companies, company_id)
-      response.code.should == "201"
+    context "as a non-admin" do
+      it "should return false if the current viewer is not an administrator for a company" do
+        response = client.is_company_admin?(foreign_company_id)
+        response.should be_false
+      end
     end
-
-    it "should determine if a company has shares enabled" do
-      response = client.is_company_share_enabled?(company_id)
-      response.should be_true
-    end
-
-    it "should return true if the current viewer is an administrator for a company" do
-      response = client.is_company_admin?(company_id)
-      response.should be_true
-    end
-
-    it "should return false if the current viewer is not an administrator for a company" do
-      response = client.is_company_admin?(foreign_company_id)
-      response.should be_false
-    end
-
   end
 
   context "Job API" do
