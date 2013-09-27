@@ -162,6 +162,7 @@ describe LinkedIn::Api do
     use_vcr_cassette :record => :new_episodes
     let(:company_id) { 3277386 }
     let(:foreign_company_id) { 162479 }
+    let(:update_key) { 'UNIU-c3277386-5786955346807357440-SHARE' }
 
     context "as an admin" do
       it "should be able to view companies with admin permissions" do
@@ -189,6 +190,28 @@ describe LinkedIn::Api do
         response.should be_an_instance_of(LinkedIn::Mash)
         response.follow_statistics.should_not be_nil
         response.status_update_statistics.should_not be_nil
+      end
+
+      it "should return company shares for a particular company page" do
+        response = client.company_shares(company_id)
+
+        response.all.size.should == 2
+        response.all.map { |share| share.update_key }.should include(update_key)
+      end
+
+      it "should return comments for a particular company share" do
+        response = client.company_share_comments(company_id, update_key)
+
+        response.all.size.should == 3
+        response.all.first.comment.should == 'testing comment'
+        response.all.first.person.id.should == 'q4INNGCf5y'
+      end
+
+      it "should return likes for a particular company share" do
+        response = client.company_share_likes(company_id, update_key)
+
+        response.all.size.should == 1
+        response.all.first.person.id.should == 'q4INNGCf5y'
       end
     end
 

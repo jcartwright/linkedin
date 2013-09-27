@@ -59,18 +59,39 @@ module LinkedIn
       end
 
       def is_company_share_enabled?(company_id, options={})
-        path = "#{company_pages_path(options.merge(:company_id => company_id))}/relation-to-viewer/is-company-share-enabled"
+        path = "#{company_pages_path(:id => company_id)}/relation-to-viewer/is-company-share-enabled"
         boolean_query(path, options)
       end
 
       def is_company_admin?(company_id, options={})
-        path = "#{company_pages_path(options.merge(:company_id => company_id))}/relation-to-viewer/is-company-share-enabled"
+        path = "#{company_pages_path(:id => company_id)}/relation-to-viewer/is-company-share-enabled"
         boolean_query(path, options)
       end
 
       def company_statistics(company_id, options={})
-        path = "#{company_pages_path(options.merge(:company_id => company_id))}/company-statistics"
+        path = "#{company_pages_path(:id => company_id)}/company-statistics"
         simple_query(path, options)
+      end
+
+      def company_shares(company_id, options={})
+        default_options = { "event-type" => "status-update" }
+
+        path = "#{company_pages_path(:id => company_id)}/updates"
+        simple_query(path, default_options.merge(options))
+      end
+
+      def company_share_comments(company_id, update_key, options={})
+        default_options = { "event-type" => "status-update" }
+
+        path = "#{company_pages_path(:id => company_id)}/updates/key=#{update_key}/update-comments"
+        simple_query(path, default_options.merge(options))
+      end
+
+      def company_share_likes(company_id, update_key, options={})
+        default_options = { "event-type" => "status-update" }
+
+        path = "#{company_pages_path(:id => company_id)}/updates/key=#{update_key}/likes"
+        simple_query(path, default_options.merge(options))
       end
 
       private

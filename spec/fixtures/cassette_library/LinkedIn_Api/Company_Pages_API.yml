@@ -1251,4 +1251,306 @@ http_interactions:
         }
     http_version: 
   recorded_at: Mon, 23 Sep 2013 21:49:37 GMT
+- request: 
+    method: get
+    uri: https://api.linkedin.com/v1/companies/3277386/updates?event-type=status-update
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      X-Li-Format: 
+      - json
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="lcJClcTvji5cOqrieSzy3Gl6821bSlsrFNWTSS2I", oauth_signature="db5dZhcTcKkKhe2KIhBXVH3txkM%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1380082502", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Li-Request-Id: 
+      - PH89QRPGMJ
+      Vary: 
+      - "*"
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Date: 
+      - Wed, 25 Sep 2013 04:15:04 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "0"
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - uNkpurkJJxMQp/Z+uSoAAA==
+    body: 
+      encoding: US-ASCII
+      string: |-
+        {
+          "_total": 2,
+          "values": [
+            {
+              "isCommentable": true,
+              "timestamp": 1379972695565,
+              "updateContent": {
+                "company": {
+                  "id": 3277386,
+                  "name": "Ensight Enterprises, LLC"
+                },
+                "companyStatusUpdate": {"share": {
+                  "author": {
+                    "firstName": "Jason",
+                    "headline": "Lean Product Manager",
+                    "id": "X_bgx1mmZW",
+                    "lastName": "Cartwright"
+                  },
+                  "comment": "I'm currently extending the LinkedIn Gem to support the recent Company Pages API. http://lnkd.in/bxUmKmh",
+                  "content": {
+                    "description": "linkedin - Ruby wrapper for the LinkedIn...",
+                    "eyebrowUrl": "http://www.linkedin.com/share?viewLink=&sid=s5788024645353484297&url=http%3A%2F%2Flnkd%2Ein%2FbxUmKmh&urlhash=tWXD&uid=5788024996890673152",
+                    "shortenedUrl": "http://lnkd.in/bxUmKmh",
+                    "submittedImageUrl": "https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png",
+                    "submittedUrl": "https://github.com/jcartwright/linkedin",
+                    "thumbnailUrl": "https://media.licdn.com/media-proxy/ext?w=80&h=100&hash=isA9GIHJoNiBWnlMngyvJeOGTJo%3D&url=https%3A%2F%2Fgithub.global.ssl.fastly.net%2Fimages%2Fmodules%2Flogos_page%2FOctocat.png",
+                    "title": "linkedin"
+                  },
+                  "id": "s5788024645353484297",
+                  "source": {"serviceProvider": {"name": "LINKEDIN"}},
+                  "timestamp": 1379972695565,
+                  "visibility": {"code": "anyone"}
+                }}
+              },
+              "updateKey": "UNIU-c3277386-5788024996890673152-SHARE",
+              "updateType": "CMPY"
+            },
+            {
+              "isCommentable": true,
+              "timestamp": 1379717671111,
+              "updateContent": {
+                "company": {
+                  "id": 3277386,
+                  "name": "Ensight Enterprises, LLC"
+                },
+                "companyStatusUpdate": {"share": {
+                  "author": {
+                    "firstName": "Jason",
+                    "headline": "Lean Product Manager",
+                    "id": "X_bgx1mmZW",
+                    "lastName": "Cartwright"
+                  },
+                  "comment": "Company Page Testing...1, 2, 3",
+                  "id": "s5786955598482374656",
+                  "source": {
+                    "application": {"name": "Social Ensight"},
+                    "serviceProvider": {"name": "LINKEDIN"}
+                  },
+                  "timestamp": 1379717671111,
+                  "visibility": {"code": "anyone"}
+                }}
+              },
+              "updateKey": "UNIU-c3277386-5786955346807357440-SHARE",
+              "updateType": "CMPY"
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Wed, 25 Sep 2013 04:15:03 GMT
+- request: 
+    method: get
+    uri: https://api.linkedin.com/v1/companies/3277386/updates/key=UNIU-c3277386-5786955346807357440-SHARE/update-comments?event-type=status-update
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      X-Li-Format: 
+      - json
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="SWkCf9QaldTBThmprGF1HsBytKtdmzVpXoeeBmPX8", oauth_signature="4mKBmkZdFw5Sq9TwlnPh7bdLhyk%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1380245691", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Li-Request-Id: 
+      - 46IERWL6DP
+      Vary: 
+      - "*"
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Date: 
+      - Fri, 27 Sep 2013 01:34:51 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "1"
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - COl85CSeJxMQYAIzkisAAA==
+    body: 
+      encoding: US-ASCII
+      string: |-
+        {
+          "_total": 3,
+          "values": [
+            {
+              "comment": "testing comment",
+              "id": 5788025396708364288,
+              "person": {
+                "apiStandardProfileRequest": {
+                  "headers": {
+                    "_total": 1,
+                    "values": [{
+                      "name": "x-li-auth-token",
+                      "value": "name:rHGT"
+                    }]
+                  },
+                  "url": "http://api.linkedin.com/v1/people/q4INNGCf5y"
+                },
+                "firstName": "Sergio",
+                "headline": "Founder of Martian Interactive",
+                "id": "q4INNGCf5y",
+                "lastName": "Bayona",
+                "pictureUrl": "http://m.c.lnkd.licdn.com/mpr/mprx/0_-RFTK-GI0ck-avAtyybYKlGw1qA-m98tKV1OKlrR2ALGltB-YjcSOAkzjslDDATY14Lxx9Ga4XxG",
+                "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=207419&authType=name&authToken=rHGT&trk=api*a3252611*s3326721*"}
+              },
+              "sequenceNumber": 0,
+              "timestamp": 1379972790887
+            },
+            {
+              "comment": "I like pie.",
+              "id": 5788025607879049216,
+              "person": {
+                "apiStandardProfileRequest": {
+                  "headers": {
+                    "_total": 1,
+                    "values": [{
+                      "name": "x-li-auth-token",
+                      "value": "name:t0HH"
+                    }]
+                  },
+                  "url": "http://api.linkedin.com/v1/people/pFpYYZ_J1k"
+                },
+                "firstName": "Todd",
+                "headline": "Owner, Recontek Systems, Inc.",
+                "id": "pFpYYZ_J1k",
+                "lastName": "Lorenz",
+                "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=50524461&authType=name&authToken=t0HH&trk=api*a3252611*s3326721*"}
+              },
+              "sequenceNumber": 1,
+              "timestamp": 1379972841233
+            },
+            {
+              "comment": "i too like pie.",
+              "id": 5788025674648039424,
+              "person": {
+                "apiStandardProfileRequest": {
+                  "headers": {
+                    "_total": 1,
+                    "values": [{
+                      "name": "x-li-auth-token",
+                      "value": "name:1xyx"
+                    }]
+                  },
+                  "url": "http://api.linkedin.com/v1/people/Lm5puSXN2L"
+                },
+                "firstName": "James",
+                "headline": "Rails Developer at Fresh Track Advisors",
+                "id": "Lm5puSXN2L",
+                "lastName": "Martin",
+                "siteStandardProfileRequest": {"url": "http://www.linkedin.com/profile/view?id=179016424&authType=name&authToken=1xyx&trk=api*a3252611*s3326721*"}
+              },
+              "sequenceNumber": 2,
+              "timestamp": 1379972857152
+            }
+          ]
+        }
+    http_version: 
+  recorded_at: Fri, 27 Sep 2013 01:34:52 GMT
+- request: 
+    method: get
+    uri: https://api.linkedin.com/v1/companies/3277386/updates/key=UNIU-c3277386-5786955346807357440-SHARE/likes?event-type=status-update
+    body: 
+      encoding: US-ASCII
+      string: ""
+    headers: 
+      X-Li-Format: 
+      - json
+      Accept: 
+      - "*/*"
+      User-Agent: 
+      - OAuth gem v0.4.7
+      Authorization: 
+      - OAuth oauth_consumer_key="lo3q1nktmcks", oauth_nonce="7CBDeqPCyISmtj7FDgsL1lbOfQ24LOw0oV3HzK8Zo", oauth_signature="mk1iF5SmsBJi6kqooYYzW3d6cnA%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1380245692", oauth_token="d897e91f-12a6-4a3d-a73b-469e36285c5c", oauth_version="1.0"
+  response: 
+    status: 
+      code: 200
+      message: OK
+    headers: 
+      Server: 
+      - Apache-Coyote/1.1
+      X-Li-Request-Id: 
+      - 2HUL2QTY1S
+      Vary: 
+      - "*"
+      X-Li-Format: 
+      - json
+      Content-Type: 
+      - application/json;charset=UTF-8
+      Date: 
+      - Fri, 27 Sep 2013 01:34:52 GMT
+      X-Li-Fabric: 
+      - PROD-ELA4
+      Age: 
+      - "0"
+      Transfer-Encoding: 
+      - chunked
+      Connection: 
+      - keep-alive
+      X-Li-Pop: 
+      - PROD-ELA4
+      X-Li-Uuid: 
+      - ECnw+ySeJxMQsPuYsSoAAA==
+    body: 
+      encoding: US-ASCII
+      string: |-
+        {
+          "_total": 1,
+          "values": [{
+            "person": {
+              "firstName": "Sergio",
+              "headline": "Founder of Martian Interactive",
+              "id": "q4INNGCf5y",
+              "lastName": "Bayona",
+              "pictureUrl": "http://m.c.lnkd.licdn.com/mpr/mprx/0_-RFTK-GI0ck-avAtyybYKlGw1qA-m98tKV1OKlrR2ALGltB-YjcSOAkzjslDDATY14Lxx9Ga4XxG"
+            },
+            "timestamp": 1379972776087
+          }]
+        }
+    http_version: 
+  recorded_at: Fri, 27 Sep 2013 01:34:52 GMT
 recorded_with: VCR 2.5.0
